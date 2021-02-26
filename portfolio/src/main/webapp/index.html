@@ -1,19 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-  </head>
-  <body>
+</head>
+
+<body >
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+        <div class="topnav">
+            <a href="#Tino Tazvitya">Tino Tazvitya</a>
+            <a style="float:right" href="https://github.com/tinotenda6">Github</a>
+            <a style="float:right" href="https://www.linkedin.com/in/tinotendatazvitya/">LinkedIn</a>
+        </div>
+        <img class="intro_img" src="images/m.jpg" width="400" height="400" />
+        <div id="about-container">
+            <p>Hi! My name's Tino Tazvitya! Thanks for visiting my portfolio! I'm currently a sophmore Student at
+                Grinnell College, with an intent to major in Computer Science and Mathematics. Besides having a strong
+                intrest in Computer Science and Mathematics, I also have a strong intrest in music and sporting
+                activities.</p>
+            <p>I was born and raised in Zimbabwe and came to Grinnell College in 2019. Intrestingly, that was my first
+                time leaving my country!
+                From the very first day I was introduced to a computer, I haveI have always been intrested in
+                technology, when I was in high school I was passionate about coding to the extent that I once saved up
+                some money to buy a small phone which I could use to
+                learn how to code online. The amazing thing is now I get to do this daily!
+            </p>
+        </div>
+        <div id="projects-container">
+            <h2>Projects I have worked on:</h2>
+            <ul style="list-style-type: circle;">
+                <li>ZiFarm</li>
+                <li>Drawing App</li>
+                <li>Math Game</li>
+                <li>Fruit Game</li>
+            </ul>
+        </div>
+        <div id="Fav-pictures">
+            <p>Check out my favourite pictures I have taken in the period of 2020-2021</p>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 5</div>
+                    <img src="images/random_photography/GC_sunrise.jpg" style="width:100%">
+                    <div class="text">Beautiful sunrise in Grinnell</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 5</div>
+                    <img src="GC_squirrell.jpg" style="width:100%">
+                    <div class="text">Personal favorite</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 5</div>
+                    <img src="images/random_photography/GC_Summer.jpg" style="width:100%">
+                    <div class="text">I totally love this one!</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 5</div>
+                    <img src="images/random_photography/GC_Winter_squirell.jpg" style="width:100%">
+                    <div class="text">Hope the squirell wasn't feeling too cold!</div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 5</div>
+                    <img src="images/random_photography/Tee_quarantine.jpg" style="width:100%">
+                    <div class="text">#Mask_up</div>
+                </div>
+            </div>
+            <br>
+
+           <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        
+        </div>
+    
+    
     </div>
-  </body>
+</body>
+<script>var slideIndex = 0;
+showSlides();</script>
 </html>
