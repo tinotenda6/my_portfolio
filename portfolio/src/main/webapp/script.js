@@ -15,17 +15,6 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['I love learning new languages', 'I play basketball', 'I play the piano', 'My favorite snack is roasted groundnuts',"I'm a technology entusiast"];
-
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
-}
 
 window.onload = function showSlides() {
   var i;
