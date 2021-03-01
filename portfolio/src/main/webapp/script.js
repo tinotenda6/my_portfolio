@@ -12,10 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/** adds automation to the image carousel */
+
 
 var slideIndex = 0; //keeps track of the current image in carousel
 
+/** Automatically show images in the carousel */
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
