@@ -12,18 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
+/** adds automation to the image carousel */
 
-window.onload = function showSlides() {
+var slideIndex = 0; //keeps track of the current image in carousel
+
+function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none"; 
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1} 
+  
+  //reset slideIndex
+  if (slideIndex > slides.length) {
+      slideIndex = 1
+    } 
+
   slides[slideIndex-1].style.display = "block"; 
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
