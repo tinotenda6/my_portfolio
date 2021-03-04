@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet that returns HTML that contains a hardcoded string. */
-@WebServlet("/mypage.html")
+@WebServlet("/mystring")
 public class HardCodedStringServlet extends HttpServlet {
 
   @Override
