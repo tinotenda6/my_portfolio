@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Servlet that returns HTML that contains the page view count. */
-@WebServlet("/index1.html")
+/** Servlet that returns HTML that contains a hardcoded string. */
+@WebServlet("/mypage.html")
 public class HardCodedStringServlet extends HttpServlet {
 
   @Override
