@@ -22,7 +22,7 @@ public class HardCodedStringServlet extends HttpServlet {
 
     //convert the messages to json
     String messageJson = convertToJson(messages);
-    response.setContentType("text/html;");
+    response.setContentType("application/json;");
     response.getWriter().println(messageJson);
     
   }
