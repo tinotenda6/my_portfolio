@@ -27,7 +27,7 @@ public class HardCodedStringServlet extends HttpServlet {
     response.getWriter().println(messageJson);
     
   }
-/**Convert Arraylist messages into Json string */
+/**Convert List messages into Json string */
   private String convertToJson(List<String> messages){
         String json = "[";
         for(int i=0; i< messages.size(); i++){
