@@ -81,11 +81,22 @@
         
         </div>
     
-  <p>Click this button to see the hardcoded string.</p>
+  <p>Click this button to see a random fact about me.</p>
     <button onclick="showHardCodedString();">
-      See string
+      See random fact
     </button>
     <p id="string-container"></p>
+    <h2 style="color: blue;">Contact me</h2>
+    <form action="/form-handler" method="POST">
+        <p>Enter email here:</p>
+        <textarea name="email"></textarea>
+        <br/>
+
+        <p>Enter message here:</p>
+        <textarea name="message-input"></textarea>
+        <br/>
+        <input type="submit" />
+    </form>
 </body>
 
 </html>
