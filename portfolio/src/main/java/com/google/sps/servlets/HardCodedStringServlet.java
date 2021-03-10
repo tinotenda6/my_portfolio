@@ -2,6 +2,7 @@ package com.google.sps.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,14 +28,15 @@ public class HardCodedStringServlet extends HttpServlet {
     
   }
 /**Convert Arraylist messages into Json string */
-  private String convertToJson(ArrayList<String> messages){
-      String json = "[";
-    for(int i=0; i< messages.size(); i++){
-        String currentMessage = messages.get(i);
-         if(i == messages.size()-1)
-            return json += "{" + "\"message\": " + "\"" + currentMessage + "\"" + "}" + "] ";
+  private String convertToJson(List<String> messages){
+        String json = "[";
+        for(int i=0; i< messages.size(); i++){
+            String currentMessage = messages.get(i);
+                if(i == messages.size()-1){
+                    return json += "{" + "\"message\": " + "\"" + currentMessage + "\"" + "}" + "] ";
+            }   
         json += "{" + "\"message\": " + "\"" + currentMessage + "\"" + "}" + ", ";  
-    }
-      return json;
+        }
+        return json;
   }
 }
