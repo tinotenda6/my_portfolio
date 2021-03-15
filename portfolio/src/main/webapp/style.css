@@ -122,3 +122,21 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+
+/* Messages in form of a table*/
+#messages-list {
+  list-style-type: none;
+}
+
+.contact {
+  border: thin solid black;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+.contact span {
+  flex-grow: 1;
+}
