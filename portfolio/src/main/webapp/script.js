@@ -33,3 +33,16 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block"; 
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+/** Check if email is valide */
+function validateEmail(email) {
+
+    var validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (!email.value.match(validEmailRegex)) {
+        alert("Invalid email address!");
+    }
+
+    return true
+}
+

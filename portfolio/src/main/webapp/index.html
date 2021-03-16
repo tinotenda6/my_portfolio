@@ -9,7 +9,8 @@
     <script src="servlets-js-files/script.js"></script>
 </head>
 
-<body onload="showSlides()" >
+<body onload="showSlides(); loadMessages
+();" >
     <div id="content">
         <div class="topnav">
             <a href="#Tino Tazvitya">Tino Tazvitya</a>
@@ -87,7 +88,7 @@
     </button>
     <p id="string-container"></p>
     <h2 style="color: blue;">Contact me</h2>
-    <form action="/form-handler" method="POST">
+    <form name="contact-me" action="/form-handler" method="POST">
         <p>Enter email here:</p>
         <textarea name="email"></textarea>
         <br/>
@@ -95,7 +96,8 @@
         <p>Enter message here:</p>
         <textarea name="message-input"></textarea>
         <br/>
-        <input type="submit" />
+        
+        <button id="submit_message">Submit</button>
     </form>
 </body>
 
