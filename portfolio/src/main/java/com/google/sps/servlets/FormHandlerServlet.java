@@ -23,15 +23,20 @@ public class FormHandlerServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     // Sanitize user input to remove Html tags and JavaScript
-    String messageValue = Jsoup.clean(request.getParameter("message-input"),Whitelist.none());
+    String firstnameValue = Jsoup.clean(request.getParameter("firstname-input"),Whitelist.none());
+    String lastnameValue = Jsoup.clean(request.getParameter("lastname-input"),Whitelist.none());
     String emailValue = Jsoup.clean(request.getParameter("email"), Whitelist.none());
+    String messageValue = Jsoup.clean(request.getParameter("message-input"),Whitelist.none());
+    
   
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
     FullEntity messageEntity =
     Entity.newBuilder(keyFactory.newKey())
-        .set("message", messageValue)
+        .set("firstname", firstnameValue)
+        .set("lastname", lastnameValue)
         .set("email", emailValue)
+        .set("message", messageValue)
         .build();
     
     datastore.put(messageEntity);
