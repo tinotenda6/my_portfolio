@@ -27,16 +27,18 @@ public class ListMessagesServlet extends HttpServlet {
         Query<Entity> query =
             Query.newEntityQueryBuilder().setKind("Message").setOrderBy(OrderBy.desc("email")).build();
         QueryResults<Entity> results = datastore.run(query);
-
+        
         List<Message> messages = new ArrayList<>();
         while (results.hasNext()) {
             Entity entity = results.next();
 
             long id = entity.getKey().getId();
+            String firstname = entity.getString("firstname");
+            String lastname = entity.getString("lastname");
             String email = entity.getString("email");
             String message = entity.getString("message");
 
-            Message msg= new Message(id, email, message);
+            Message msg= new Message(id, firstname, lastname, email, message);
             messages.add(msg); 
         }
 
