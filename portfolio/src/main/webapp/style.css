@@ -1,13 +1,14 @@
 body{
-    background-image: url(images/background.jpg);
+    background-image: url(images/texture-4248634_1920.jpg);
 }
 p{
    color: white;
+   font-size: 18px;
 }
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 750px;
 }
 
 #about-container {
@@ -21,25 +22,47 @@ ul li {
 ul li span{
     color:white;
 }
+
+/**selfie image styling*/
 img{
     image-orientation: from-image;
 }
 
+.img_surround{
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    width:400px;
+    height:400px;
+    text-align: center;
+}
+
+.img-txt { 
+    position: absolute; 
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+} 
+
 img.intro_img{
     padding-top: 20px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
 .topnav {
   overflow: hidden;
-  background-color: blue;
+  background-color: greenyellow;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: blue;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -65,21 +88,22 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-  color: blue;
+  color: greenyellow;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 500;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   text-align: center;
+  
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: blue;
+  color:greenyellow;
   font-size: 15px;
-  font-weight: 100;
+  font-weight: 500;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -139,4 +163,59 @@ img {vertical-align: middle;}
 
 .contact span {
   flex-grow: 1;
+}
+/*form styling**/
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#form-container{
+    display: block;
+    text-align: center;
+}
+      
+.form-inner input,
+.form-inner textarea {  
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgb(211, 207, 207);
+    font-size: 20px;
+} 
+    
+.form-inner textarea {
+    resize: both;
+}
+
+.form-inner input[type=text]:focus, .form-inner input[type=email]:focus, .form-inner textarea:focus {
+    background: #FFFFFF;
+}
+
+
+#submit_message{
+        
+    background-color:blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.button_wrap{
+    text-align: center;
+}    
+ /*On smaller screens*/     
+@media (min-width: 568px) {
+    form {
+        width: 60%;
+    }
 }

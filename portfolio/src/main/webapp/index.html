@@ -9,96 +9,67 @@
     <script src="servlets-js-files/script.js"></script>
 </head>
 
-<body onload="showSlides(); loadMessages
-();" >
+<body onload="showHardCodedString();" >
     <div id="content">
         <div class="topnav">
             <a href="#Tino Tazvitya">Tino Tazvitya</a>
             <a style="float:right" href="https://github.com/tinotenda6">Github</a>
             <a style="float:right" href="https://www.linkedin.com/in/tinotendatazvitya/">LinkedIn</a>
+            <a style="float:right" href="/gallery.html">Gallery</a>
         </div>
-        <img class="intro_img" src="images/m.jpg" width="400" height="400" />
+        <div class="img_surround">
+            
+        <div>
+            <img class="intro_img" src="images/m.jpg" width="400" height="400"/>
+        </div>
+            
+        <p class="img-txt" id="fact-container" ></p>
+        
+        </div>
+        
         <div id="about-container">
-            <p>Hi! My name's Tino Tazvitya! Thanks for visiting my portfolio! I'm currently a sophmore Student at
-                Grinnell College, with an intent to major in Computer Science and Mathematics. Besides having a strong
-                intrest in Computer Science and Mathematics, I also have a strong intrest in music and sporting
-                activities.</p>
+            <p>Hi! My name's Tino Tazvitya! Thanks for visiting my portfolio! <br> I'm a Grinnell College student'23 majoring in Computer Science and Mathematics. 
+                I enjoy programming in Java, and Python. If you want to know more about my experience feel free to visit <a style="text-decoration: none; color: gold;" href="https://docs.google.com/document/d/1Woof0SgAQsKo6Fu8qDW5crHl9F50mwRWHX9KzG3CUBM/edit?usp=sharing">My Resume</a>
+            </p>
+
+            <h1 style="color: greenyellow;">Now here's a little background about me</h1>
             <p>I was born and raised in Zimbabwe and came to Grinnell College in 2019. Intrestingly, that was my first
-                time leaving my country!
-                From the very first day I was introduced to a computer, I have have always been intrested in
-                technology, when I was in high school I was passionate about coding to the extent that I once saved up
-                some money to buy a small phone which I could use to
-                learn how to code online. The amazing thing is now I get to do this daily!
+                time leaving my home country! I knew the start of this new journey was worth it as I was on my way to pursuing my passion in Computer Science.
+                Since I was in high school, I have always seen myself building applications, that will make a positive impact in the world. 
+                I see myself, building applications to help students, to uplift women, and the whole community in general. 
+                Thus I remain commited to learning more about technology, and gain more experience in this field.
             </p>
         </div>
         <div id="projects-container">
-            <h2 style="color: blue;">Projects I have worked on:</h2>
+            <h2 style="color: greenyellow;">Here are some cool projects I have worked on:</h2>
             <ul style="list-style-type: circle;">
-                <li>ZiFarm- a website that connects farmers with customers</li>
-                <li>Drawing App- <a style="text-decoration: none;" href="https://tinotenda6.github.io/drawing/Drawing%20App/">Check it out here</a></li>
-                <li>Math Game- <a style="text-decoration: none;" href="https://tinotenda6.github.io/mathgme/">Check it out here!</a></li>
+                <li><a style="text-decoration: none; color: gold;" href="https://tinotenda6.github.io/drawing/Drawing%20App/">Drawing application</a></li>
+                <li> <a style="text-decoration: none;color: gold;" href="https://tinotenda6.github.io/mathgme/">Fun Math Game</a></li>
             </ul>
         </div>
-        <div id="Fav-pictures">
-            <h2 style="color: blue;">Check out my favourite pictures I have taken in the period of 2020-2021</h2>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 5</div>
-                    <img src="images/random_photography/GC_sunrise.jpg" style="width:100%">
-                    <div class="text">Beautiful sunrise in Grinnell</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 5</div>
-                    <img src="images/random_photography/GC_squirrell.jpg" style="width:100%">
-                    <div class="text">Personal favorite</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 5</div>
-                    <img src="images/random_photography/GC_Summer.jpg" style="width:100%">
-                    <div class="text">I totally love this one!</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">4 / 5</div>
-                    <img src="images/random_photography/GC_Winter_squirell.jpg" style="width:100%">
-                    <div class="text">Hope the squirell wasn't feeling too cold!</div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="numbertext">5 / 5</div>
-                    <img src="images/random_photography/Tee_quarantine.jpg" style="width:100%;" >
-                    <div class="text">#Mask_up</div>
-                </div>
-            </div>
-            <br>
-
-           <div style="text-align:center">
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-            </div>
         
-        </div>
-    
-  <p>Click this button to see a random fact about me.</p>
-    <button onclick="showHardCodedString();">
-      See random fact
-    </button>
-    <p id="string-container"></p>
-    <h2 style="color: blue;">Contact me</h2>
+    <div id="form-container" style="background-color: white;">
     <form name="contact-me" action="/form-handler" method="POST">
-        <p>Enter email here:</p>
-        <textarea name="email"></textarea>
-        <br/>
-
-        <p>Enter message here:</p>
-        <textarea name="message-input"></textarea>
-        <br/>
+        <div class="form-inner">
+        <h1 style="color: blue; text-align: center;">Contact me</h1>
         
+                
+                <input type="text" placeholder="First Name" name="firstname-input" required>
+            
+                <input type="text" placeholder="Last Name" name="lastname-input" required>
+                <input type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" placeholder="email" name="email" required>
+           
+                
+                <textarea placeholder="Message" name="message-input" required></textarea>
+        </div>
+        <div class=button_wrap>
         <button id="submit_message">Submit</button>
+        </div>
     </form>
+    </div>
+
+    </div>
 </body>
 
 </html>
+
