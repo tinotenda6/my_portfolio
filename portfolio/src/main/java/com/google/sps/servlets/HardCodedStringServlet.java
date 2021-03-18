@@ -18,8 +18,10 @@ public class HardCodedStringServlet extends HttpServlet {
     List<String> messages = new ArrayList<String>();
     //add messages to arraylist messages
     messages.add("I'm a golden state warriors fan!");
-    messages.add("My favorite Tv show is How to get away with murder");
+    messages.add("My favourite show is HTGAWM");
     messages.add("I play basketball");
+    messages.add("I started playing piano in 2020");
+    messages.add("God's grace keeps me going");
 
     //convert the messages to json
     String messageJson = convertToJson(messages);

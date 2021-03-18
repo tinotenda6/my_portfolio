@@ -3,12 +3,13 @@ async function showHardCodedString() {
   const responseFromServer = await fetch('/mystring');
   const messagesFromResponse = await responseFromServer.json();
 
-  const stringContainer = document.getElementById('string-container');
+  const stringContainer = document.getElementById('fact-container');
 
   var totalMessages = messagesFromResponse.length;
   var randomNumber = getRandomInt(totalMessages);
   
     stringContainer.innerHTML = messagesFromResponse[randomNumber].message;
+    setTimeout(showHardCodedString, 2000);
 
 }
  /** Returns a random number between 0 and max-1 */
@@ -21,7 +22,6 @@ function loadMessages() {
   fetch('/load-messages').then(response => response.json()).then((messages) => {
     const messageElement = document.getElementById('messages-list');
     messages.forEach((message) => {
-        console.log(8);
         messageElement.appendChild(createMessageElement(message));
     })
   });
@@ -31,6 +31,12 @@ function loadMessages() {
 function createMessageElement(message) {
     const contactElement = document.createElement('li');
     contactElement.className = 'contact';
+
+    const firstnameElement = document.createElement('span');
+    firstnameElement.innerText = message.firstname;
+
+    const lastnameElement = document.createElement('span');
+    lastnameElement.innerText = lastname.email;
 
     const emailElement = document.createElement('span');
     emailElement.innerText = message.email;
@@ -42,11 +48,12 @@ function createMessageElement(message) {
     deleteButtonElement.innerText = 'Delete';
     deleteButtonElement.addEventListener('click', () => {
         deleteMessage(message);
-
         // Remove the contact from the DOM.
         contactElement.remove();
     });
 
+    contactElement.appendChild(firstnameElement);
+    contactElement.appendChild(lastnameElement);
     contactElement.appendChild(emailElement);
     contactElement.appendChild(messageElement);
     contactElement.appendChild(deleteButtonElement);
