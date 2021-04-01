@@ -25,7 +25,7 @@ public class ListMessagesServlet extends HttpServlet {
         Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     //Create Query instance
         Query<Entity> query =
-            Query.newEntityQueryBuilder().setKind("Message").setOrderBy(OrderBy.desc("email")).build();
+            Query.newEntityQueryBuilder().setKind("Message").setOrderBy(OrderBy.desc("timestamp")).build();
         QueryResults<Entity> results = datastore.run(query);
         
         List<Message> messages = new ArrayList<>();
@@ -37,8 +37,9 @@ public class ListMessagesServlet extends HttpServlet {
             String lastname = entity.getString("lastname");
             String email = entity.getString("email");
             String message = entity.getString("message");
-
-            Message msg= new Message(id, firstname, lastname, email, message);
+            long timestamp = entity.getLong("timestamp");
+            
+            Message msg= new Message(id, firstname, lastname, email, message, timestamp);
             messages.add(msg); 
         }
 

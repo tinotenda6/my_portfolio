@@ -27,7 +27,7 @@ public class FormHandlerServlet extends HttpServlet {
     String lastnameValue = Jsoup.clean(request.getParameter("lastname-input"),Whitelist.none());
     String emailValue = Jsoup.clean(request.getParameter("email"), Whitelist.none());
     String messageValue = Jsoup.clean(request.getParameter("message-input"),Whitelist.none());
-    
+    long timestamp = System.currentTimeMillis();
   
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
@@ -37,6 +37,7 @@ public class FormHandlerServlet extends HttpServlet {
         .set("lastname", lastnameValue)
         .set("email", emailValue)
         .set("message", messageValue)
+        .set("timestamp",timestamp)
         .build();
     
     datastore.put(messageEntity);
