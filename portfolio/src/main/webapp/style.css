@@ -153,13 +153,7 @@ img {vertical-align: middle;}
   list-style-type: none;
 }
 
-.contact {
-  border: thin solid black;
-  display: flex;
-  margin: 10px;
-  padding: 10px;
-  width: 300px;
-}
+
 
 .contact span {
   flex-grow: 1;
@@ -218,4 +212,24 @@ form{
     form {
         width: 60%;
     }
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }

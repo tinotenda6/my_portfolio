@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Tino Tazvitya</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="servlets-js-files/script.js"></script>
@@ -29,7 +29,7 @@
         
         <div id="about-container">
             <p>Hi! My name's Tino Tazvitya! Thanks for visiting my portfolio! <br> I'm a Grinnell College student'23 majoring in Computer Science and Mathematics. 
-                I enjoy programming in Java, and Python. If you want to know more about my experience feel free to visit <a style="text-decoration: none; color: gold;" href="https://docs.google.com/document/d/1Woof0SgAQsKo6Fu8qDW5crHl9F50mwRWHX9KzG3CUBM/edit?usp=sharing">My Resume</a>
+                I enjoy programming in Java, and Python. If you want to know more about my experience feel free to visit <a style="text-decoration: none; color: gold;" href="https://drive.google.com/file/d/1t_8LPAiW5sqgsGZcj1S4_soE8FuECJaF/view?usp=sharing">My Resume</a>
             </p>
 
             <h1 style="color: greenyellow;">Now here's a little background about me</h1>
@@ -42,13 +42,29 @@
         </div>
         <div id="projects-container">
             <h2 style="color: greenyellow;">Here are some cool projects I have worked on:</h2>
-            <ul style="list-style-type: circle;">
-                <li><a style="text-decoration: none; color: gold;" href="https://tinotenda6.github.io/drawing/Drawing%20App/">Drawing application</a></li>
-                <li> <a style="text-decoration: none;color: gold;" href="https://tinotenda6.github.io/mathgme/">Fun Math Game</a></li>
-            </ul>
+            
+                <div class="row">
+                <div class="column">
+                <video width="320px" height="240" controls>
+                 <source src="videos/Final_demo_for_drawing_app3.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video><br>
+                <a style="text-decoration: none; color: gold;" href="https://tinotenda6.github.io/drawing/Drawing%20App/">Drawing application</a>
+                </div>
+                <div class="column">
+                <video width="320px" height="240" controls>
+                 <source src="videos/MathDemo_correct.mov" type="video/mp4">
+            
+                        Your browser does not support the video tag.
+                </video><br>
+                 <a style="text-decoration: none;color: gold;" href="https://tinotenda6.github.io/mathgme/">Fun Math Game</a>
+                </div>
+           </div>
+            
         </div>
-        
-    <div id="form-container" style="background-color: white;">
+        <br>
+
+<br>    <div id="form-container" style="background-color: white;">
     <form name="contact-me" action="/form-handler" method="POST">
         <div class="form-inner">
         <h1 style="color: blue; text-align: center;">Contact me</h1>
