@@ -29,20 +29,18 @@ function loadMessages() {
 
 /** Creates an element that represents a message */
 function createMessageElement(message) {
+    
     const contactElement = document.createElement('li');
     contactElement.className = 'contact';
-
-    const firstnameElement = document.createElement('span');
-    firstnameElement.innerText = message.firstname;
-
-    const lastnameElement = document.createElement('span');
-    lastnameElement.innerText = lastname.email;
-
-    const emailElement = document.createElement('span');
-    emailElement.innerText = message.email;
     
+    const dateElement = document.createElement('span');
+    dateElement.innerText = "At " + convertTimestamptoDate(message.timestamp) +" "; 
+
+    const firstlastnameElement = document.createElement('span');
+    firstlastnameElement.innerText = message.firstname + " " + message.lastname + " [ " + message.email + " ] " ;
+
     const messageElement = document.createElement('span');
-    messageElement.innerText = message.message; 
+    messageElement.innerText = "sent the message: "+ message.message + ". " + "Have a good day! ";  
 
     const deleteButtonElement = document.createElement('button');
     deleteButtonElement.innerText = 'Delete';
@@ -52,9 +50,9 @@ function createMessageElement(message) {
         contactElement.remove();
     });
 
-    contactElement.appendChild(firstnameElement);
-    contactElement.appendChild(lastnameElement);
-    contactElement.appendChild(emailElement);
+
+    contactElement.appendChild(dateElement);
+    contactElement.appendChild(firstlastnameElement);
     contactElement.appendChild(messageElement);
     contactElement.appendChild(deleteButtonElement);
   
@@ -66,5 +64,12 @@ function deleteMessage(message) {
   const params = new URLSearchParams();
   params.append('id', message.id);
   fetch('/delete-message', {method: 'POST', body: params});
+}
+
+/**convert milliseconds of timestamp to readable date */
+
+function convertTimestamptoDate(timestamp){
+     var date = new Date(timestamp);
+     return date.toLocaleDateString();
 }
 
